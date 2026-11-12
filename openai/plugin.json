@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "andock",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Your mailbox at GMX, WEB.DE, Yahoo, AOL, iCloud, IONOS, Bluewin or any other provider: inbox briefings, open replies, follow-ups on quotes and invoices, and drafts.",
   "author": { "name": "AMINI GmbH", "email": "info@andock.app", "url": "https://andock.app" },
   "homepage": "https://andock.app",
@@ -19,7 +19,7 @@
         "websiteURL": "https://andock.app",
         "privacyPolicyURL": "https://andock.app/datenschutz",
         "termsOfServiceURL": "https://andock.app/agb",
-        "supportURL": "https://andock.app/impressum",
+        "supportURL": "https://andock.app/hilfe",
         "defaultPrompt": [
           "Was wartet heute auf mich?",
           "Wer hat mir nicht geantwortet?",
