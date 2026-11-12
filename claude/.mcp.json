@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "andock": {
+      "type": "http",
+      "url": "https://mcp.andock.app/mcp"
+    }
+  }
+}

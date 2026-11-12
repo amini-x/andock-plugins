@@ -1,0 +1,15 @@
+{
+  "name": "andock",
+  "description": "Andock plugins for Claude: mail jobs for any mailbox.",
+  "owner": {
+    "name": "AMINI GmbH",
+    "email": "info@andock.app"
+  },
+  "plugins": [
+    {
+      "name": "andock",
+      "source": "./claude",
+      "description": "Your mailbox at GMX, WEB.DE, Yahoo, AOL, iCloud, IONOS, Bluewin or any other provider, with inbox briefings, follow-ups and drafts."
+    }
+  ]
+}
