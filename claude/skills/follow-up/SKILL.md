@@ -42,16 +42,16 @@ important ones are quotes (Offerten, Angebote) and invoices (Rechnungen) without
 ## Output format
 
 ```
-<n> Mails ohne Antwort seit mindestens <n> Arbeitstagen
+<n> emails without a reply for at least <n> working days
 
-Rechnungen
-- <Empfänger>: Rechnung <Nr. wörtlich>, <Betrag wörtlich>, fällig <Datum wörtlich> – <überfällig seit n Tagen | noch nicht fällig>
+Invoices
+- <recipient>: invoice <no. verbatim>, <amount verbatim>, due <date verbatim>, <overdue for n days | not due yet>
 
-Offerten
-- <Empfänger>: <Betreff>, gesendet <Datum>, <n> Arbeitstage ohne Antwort
+Quotes
+- <recipient>: <subject>, sent <date>, <n> working days without a reply
 
-Andere Fragen
-- <Empfänger>: <Betreff>, gesendet <Datum>
+Other questions
+- <recipient>: <subject>, sent <date>
 ```
 
 Write in the user's language and the thread's du/Sie.
@@ -73,8 +73,8 @@ Write in the user's language and the thread's du/Sie.
 
 ## Example prompts
 
+- "Who hasn't replied to my quotes from last week?"
+- "Draft payment reminders for unpaid invoices, but don't send them."
 - "Wer hat mir nicht geantwortet?"
 - "Welche Offerten sind noch offen?"
 - "Schreib eine freundliche Erinnerung für alle Rechnungen, die überfällig sind."
-- "Who hasn't replied to my quotes from last week?"
-- "Draft payment reminders for unpaid invoices, but don't send them."

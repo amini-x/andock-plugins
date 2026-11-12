@@ -1,7 +1,7 @@
 {
   "name": "andock",
   "displayName": "Andock",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Your mailbox at GMX, WEB.DE, Yahoo, AOL, iCloud, IONOS, Bluewin or any other provider: inbox briefings, open replies, follow-ups on quotes and invoices, and drafts.",
   "author": {
     "name": "AMINI GmbH",
@@ -24,9 +24,9 @@
     "drafts",
     "follow-up"
   ],
-  "privacyPolicyUrl": "https://andock.app/datenschutz",
-  "termsOfServiceUrl": "https://andock.app/agb",
-  "supportUrl": "https://andock.app/hilfe",
+  "privacyPolicyUrl": "https://andock.app/privacy",
+  "termsOfServiceUrl": "https://andock.app/terms",
+  "supportUrl": "https://andock.app/help",
   "skills": [
     "./skills/"
   ],

@@ -24,13 +24,13 @@ Find the mail that holds the answer, answer from it, and say where the answer ca
 ## Output format
 
 ```
-<Antwort in einem Satz, Fakten wörtlich aus der Mail>
+<answer in one sentence, facts verbatim from the mail>
 
-Quelle: <Absender>, "<Betreff>", <Datum>
-<kurzes wörtliches Zitat der entscheidenden Zeile, wenn hilfreich>
+Source: <sender>, "<subject>", <date>
+<short verbatim quote of the line that matters, if helpful>
 ```
 
-If not found: say so, list what was searched, and suggest one more place or word to try.
+Write in the user's language. If not found: say so, list what was searched, and suggest one more place or word to try.
 
 ## When to ask
 
@@ -48,8 +48,8 @@ If not found: say so, list what was searched, and suggest one more place or word
 
 ## Example prompts
 
+- "What did my landlord write last week?"
+- "Find the invoice from the plumber and tell me the amount."
 - "Wann ist der Termin beim Zahnarzt?"
 - "Was hat mir die Verwaltung wegen der Nebenkosten geschrieben?"
 - "Such die Buchungsnummer vom Hotel in Lugano und antworte, dass wir einen Tag später kommen."
-- "What did my landlord write last week?"
-- "Find the invoice from the plumber and tell me the amount."

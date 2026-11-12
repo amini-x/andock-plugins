@@ -19,7 +19,7 @@ Get the user to zero open replies: find what they owe an answer to, then draft t
    1. Read the whole conversation with `get_thread` (or `read_email`).
    2. Decide what the reply needs. If it needs a decision only the user can make (date, price, yes or
       no, amount, availability), ask first, or draft with a visible placeholder like
-      `[Datum bestätigen]`.
+      `[confirm date]` (`[Datum bestätigen]` in German).
    3. Write the draft with `reply_email` (draft, no `send`). Same language and du/Sie as the thread.
       Short, friendly, signed like the user's earlier replies in the thread if there are any.
    4. Show the draft text and say it is saved in the drafts folder.
@@ -30,17 +30,17 @@ Get the user to zero open replies: find what they owe an answer to, then draft t
 
 List:
 ```
-<n> Mails warten auf deine Antwort
+<n> emails are waiting for your reply
 
-1. <Absender>: <Betreff> (<Datum>, seit <n> Tagen)
-   <Was gefragt ist, ein Satz>
+1. <sender>: <subject> (<date>, for <n> days)
+   <what is asked, one sentence>
 ```
 
 After each draft:
 ```
-Entwurf an <Empfänger>, Betreff "<Betreff>" – gespeichert in Entwürfe
-<Entwurfstext>
-Offen: <Platzhalter, falls vorhanden>
+Draft to <recipient>, subject "<subject>", saved in Drafts
+<draft text>
+Open: <placeholders, if any>
 ```
 
 ## When to ask
@@ -59,8 +59,8 @@ Offen: <Platzhalter, falls vorhanden>
 
 ## Example prompts
 
+- "Who's still waiting for a reply from me?"
+- "Help me get to inbox zero on replies, drafts only."
 - "Wem schulde ich noch eine Antwort?"
 - "Welche Mails habe ich diese Woche nicht beantwortet?"
 - "Schreib mir Entwürfe für alle offenen Antworten im WEB.DE-Postfach."
-- "Who's still waiting for a reply from me?"
-- "Help me get to inbox zero on replies, drafts only."

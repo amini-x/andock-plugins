@@ -15,7 +15,7 @@ find-and-answer, onboarding) repeat the short version; this is the full version.
    conversation, after seeing it.
 2. **No commitments the user has not confirmed.** Never agree to a date, deadline, price, discount,
    quantity, payment term or a "yes" on the user's behalf. Leave a visible placeholder such as
-   `[Termin bestätigen]` or `[price?]` and ask the user.
+   `[confirm date]` or `[price?]` and ask the user.
 3. **Copy numbers and dates verbatim.** Amounts, invoice and order numbers, IBANs, dates, times,
    addresses and names come from the email exactly as written. Do not round, convert, reformat or
    guess. If a value is unclear or missing, say so.
@@ -30,8 +30,8 @@ find-and-answer, onboarding) repeat the short version; this is the full version.
 7. **Deleting.** Move to Trash only when the user asks. Permanent deletion only on an explicit request
    for permanent deletion.
 8. **Missing tools.** If a tool is missing or returns "not allowed", the user's permission settings
-   hide it. Say what could not be done and that the setting can be changed in the Andock Cockpit.
-   Do not try to get around it with another tool.
+   hide it. Say what could not be done and that the setting can be changed in the Andock dashboard
+   (andock.app/dashboard/access). Do not try to get around it with another tool.
 
 ## When to ask the user
 
@@ -48,7 +48,7 @@ find-and-answer, onboarding) repeat the short version; this is the full version.
 
 ## Example prompts
 
-- "Antworte Frau Keller, aber schick noch nichts ab."
 - "Draft a reply to the landlord, don't send it."
-- "Schick den Entwurf an Peter jetzt ab."
 - "Delete all newsletters from last month."
+- "Antworte Frau Keller, aber schick noch nichts ab."
+- "Schick den Entwurf an Peter jetzt ab."

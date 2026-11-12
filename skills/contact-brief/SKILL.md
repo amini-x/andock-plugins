@@ -49,6 +49,8 @@ Notiz: <Notiz aus dem Adressbuch>
 
 ## Example prompts
 
+- "Who is Peter Brunner?"
+- "What's still open with anna@company.com before I call her?"
 - "Wer ist Peter Brunner?"
 - "Was ist mit anna@firma.ch noch offen, bevor ich sie anrufe?"
 - "Gib mir die Telefonnummer von Hans Meier."
