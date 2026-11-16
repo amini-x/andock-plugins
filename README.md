@@ -9,14 +9,20 @@ Andock is free. Sign up and connect your mailbox at [andock.app](https://andock.
 
 ## Claude
 
+On claude.ai or in the Claude app (paid plans): open **Customize**, then **Plugins**, click **Add**, then
+**Add marketplace** and **Add from a repository**. Enter `amini-x/andock-plugins` and add the Andock plugin.
+
+In Claude Code:
+
 ```
 /plugin marketplace add amini-x/andock-plugins
 /plugin install andock@andock
 ```
 
-The plugin adds the Andock connector (`https://mcp.andock.app/mcp`) and these skills:
-inbox-briefing, reply-zero, follow-up, find-and-answer, house-rules, onboarding, schedule-meeting,
-contact-brief.
+The plugin adds the Andock connector (`https://mcp.andock.app/mcp`) and these skills: inbox-briefing,
+reply-zero, reply-to-email, write-email, follow-up, find-and-answer, summarize-thread,
+bills-and-deadlines, suspicious-mail-check, inbox-cleanup, promise-tracker, schedule-meeting,
+contact-brief, onboarding, house-rules. In a chat, type "/" to pick one, or just ask.
 
 ## ChatGPT
 
