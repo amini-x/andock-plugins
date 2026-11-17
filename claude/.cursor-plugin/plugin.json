@@ -1,0 +1,16 @@
+{
+  "name": "andock",
+  "displayName": "Andock",
+  "version": "0.4.0",
+  "description": "Your mailbox at GMX, WEB.DE, Yahoo, AOL, iCloud, IONOS, Bluewin or any other provider: inbox briefings, open replies, follow-ups on quotes and invoices, and drafts.",
+  "author": { "name": "AMINI GmbH", "email": "info@andock.app" },
+  "homepage": "https://andock.app",
+  "repository": "https://github.com/amini-x/andock-plugins",
+  "license": "MIT",
+  "logo": "assets/icon.png",
+  "keywords": ["andock", "email", "mailbox", "imap"],
+  "category": "productivity",
+  "tags": ["email", "mailbox"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}
