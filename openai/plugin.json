@@ -1,9 +1,13 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "andock",
-  "version": "0.4.0",
-  "description": "Your mailbox at GMX, WEB.DE, Yahoo, AOL, iCloud, IONOS, Bluewin or any other provider: inbox briefings, open replies, follow-ups on quotes and invoices, and drafts.",
-  "author": { "name": "AMINI GmbH", "email": "info@andock.app", "url": "https://andock.app" },
+  "version": "0.4.1",
+  "description": "Connect your mailbox from most email providers. Get a briefing of new mail, see who waits for your reply, follow up on quotes and invoices, and write drafts.",
+  "author": {
+    "name": "AMINI GmbH",
+    "email": "info@andock.app",
+    "url": "https://andock.app"
+  },
   "homepage": "https://andock.app",
   "license": "MIT",
   "extensions": {
@@ -11,11 +15,14 @@
       "onboardingSkill": "./skills/onboarding/SKILL.md",
       "interface": {
         "displayName": "Andock",
-        "shortDescription": "Read, sort and answer your email",
-        "longDescription": "Work with your mailbox at GMX, WEB.DE, Yahoo, AOL, iCloud, IONOS, Bluewin, Infomaniak, Hostpoint or any other provider. Get a short briefing of what came in, see who is waiting for your reply and who has not answered you, follow up on open quotes and invoices, find facts in old mail, and let the assistant write drafts. Mail is only sent when you ask, and sending can require your approval through a link.",
+        "shortDescription": "Read, sort and answer email",
+        "longDescription": "Connect the mailbox you already have, from most email providers, and work with it in ChatGPT. Get a short briefing of what came in, see who is waiting for your reply and who has not answered you, follow up on open quotes and invoices, find facts in old mail, and let ChatGPT write drafts. Mail is only sent when you ask, and sending can require your approval through a link.",
         "developerName": "AMINI GmbH",
         "category": "Productivity",
-        "capabilities": ["Read", "Write"],
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
         "websiteURL": "https://andock.app",
         "privacyPolicyURL": "https://andock.app/privacy",
         "termsOfServiceURL": "https://andock.app/terms",
@@ -28,6 +35,61 @@
         "brandColor": "#0A63E8",
         "composerIcon": "./assets/icon.png",
         "logo": "./assets/logo.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Inbox briefing",
+              "prompt": "What needs my attention in my inbox?",
+              "tools_triggered": "triage_inbox",
+              "expected_behavior": "Sorts the last days of mail: Maria Keller's two questions on the quote under needs reply, Sam Rivera and Ruedi Meier as first contacts, and the receipt, newsletter and cc mail grouped separately."
+            },
+            {
+              "description": "Replies the user owes",
+              "prompt": "Who is still waiting for my reply?",
+              "tools_triggered": "get_owed_replies",
+              "expected_behavior": "Lists conversations waiting for the user, with Maria Keller (two questions on the website quote) at the top."
+            },
+            {
+              "description": "Sent mail without an answer",
+              "prompt": "Who hasn't answered me?",
+              "tools_triggered": "get_awaiting_replies",
+              "expected_behavior": "Lists Tom Brunner (invoice 2026-031) and Lea Schmid (brochure proposal). Lea's out-of-office reply does not count as an answer."
+            },
+            {
+              "description": "Find a fact in old mail",
+              "prompt": "What budget did Tom confirm for the rebrand?",
+              "tools_triggered": "search_emails, read_email",
+              "expected_behavior": "Finds Tom Brunner's mail and answers CHF 8,400 with final files due by 15 December, naming the mail it came from."
+            },
+            {
+              "description": "Draft a reply",
+              "prompt": "Draft a reply to Maria: two phases are fine and I can start on 1 December.",
+              "tools_triggered": "reply_email",
+              "expected_behavior": "Saves a short reply to Maria Keller in the Drafts folder of the demo mailbox. Nothing is sent."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Weather, unrelated to email",
+              "prompt": "What's the weather in Zurich tomorrow?"
+            },
+            {
+              "description": "Creative writing, unrelated to email",
+              "prompt": "Write a short poem about autumn."
+            },
+            {
+              "description": "Spreadsheet, unrelated to email",
+              "prompt": "Create a spreadsheet of my monthly budget."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "Andock does not sell products or process payments."
+      },
+      "publication": {
+        "release_notes": "Adds the review test cases, a shorter subtitle and a description that fits every provider. ChatGPT now asks only for the profile and email scopes when you connect."
       }
     }
   }

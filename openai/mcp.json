@@ -6,7 +6,17 @@
       "url": "https://mcp.andock.app/mcp",
       "extensions": {
         "com.openai": {
-          "auth": { "type": "oauth", "client": { "mode": "dcr" } }
+          "auth": {
+            "type": "oauth",
+            "client": {
+              "mode": "dcr"
+            },
+            "defaultScopes": [
+              "profile",
+              "email"
+            ],
+            "oidcEnabled": false
+          }
         }
       }
     }

@@ -1,12 +1,28 @@
 ---
 name: onboarding
-description: Use right after the user connects a mailbox through Andock, or when they ask what they can do with their email here, how to start, or whether the connection works, even if they only say "done" or "Und jetzt?" right after connecting. Checks the connection, says in two sentences what is possible, and offers three first prompts. Not for running a briefing (inbox-briefing) or cleanup (inbox-cleanup) unasked, or for what the assistant is allowed to do (house-rules).
+description: Use right after the user connects a mailbox through Andock, when they want to set up their email here or a tool says no mailbox is connected yet, or when they ask what they can do with their email here, how to start, or whether the connection works, even if they only say "done" or "Und jetzt?" right after connecting. Checks the connection, says in two sentences what is possible, and offers three first prompts. Not for running a briefing (inbox-briefing) or cleanup (inbox-cleanup) unasked, or for what the assistant is allowed to do (house-rules).
 compatibility: Written for the Andock mail connector (mcp.andock.app).
 ---
 
 # Onboarding
 
 The user just connected a mailbox. Show that it works and give them a first useful thing to do.
+
+## No mailbox yet
+
+When a tool says no mailbox is connected, or the user asks to set up their email:
+
+1. Ask for the email address they want to use. Ask for nothing else.
+2. Call `setup_mailbox` with it. Relay its steps one at a time, in the user's language: ask its
+   questions, give the direct links and short videos, and wait until the user is done with a step.
+   Keep provider button labels as the tool gives them ("POP3- und IMAP-Zugriff erlauben").
+3. Never ask for the password in the chat, and never accept it. Send the dashboard link from the
+   result; the password is typed only there, on andock.app. If the user pastes it anyway, tell them
+   not to and point to the link.
+4. When the user says they are done, go on with step 1 below. If `list_folders` still says no
+   mailbox, ask whether the dashboard showed an error and pass on what it said.
+
+If the result says the mail is at Google or Microsoft, tell the user that and stop.
 
 ## Steps
 
@@ -17,7 +33,8 @@ The user just connected a mailbox. Show that it works and give them a first usef
 2. Say in two sentences, in the language of the user's message, what the listed tools allow (read
    and search, sort the inbox, open replies and follow-ups, scam checks, bills), and that mail is only
    sent when the user asks, maybe after approval through a link. Name drafts only if `save_draft` is
-   listed, free times only with `find_free_slots`, contacts only with `search_contacts`.
+   listed, free times only with `find_free_slots`, adding appointments only with `create_event`,
+   contacts only with `search_contacts`.
 3. Offer these three first prompts:
    - **What needs me today?** / **Was wartet heute auf mich?** (inbox-briefing)
    - **Who hasn't replied to me?** / **Wer hat mir nicht geantwortet?** (follow-up)
